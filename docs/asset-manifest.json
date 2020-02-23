@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/current-weather/static/css/main.d1b05096.chunk.css",
-    "main.js": "/current-weather/static/js/main.a288535d.chunk.js",
-    "main.js.map": "/current-weather/static/js/main.a288535d.chunk.js.map",
-    "runtime-main.js": "/current-weather/static/js/runtime-main.e1bf8379.js",
-    "runtime-main.js.map": "/current-weather/static/js/runtime-main.e1bf8379.js.map",
-    "static/js/2.facf0f99.chunk.js": "/current-weather/static/js/2.facf0f99.chunk.js",
-    "static/js/2.facf0f99.chunk.js.map": "/current-weather/static/js/2.facf0f99.chunk.js.map",
-    "index.html": "/current-weather/index.html",
-    "precache-manifest.c81c830d27c56ade0d8b62a798ad9bc1.js": "/current-weather/precache-manifest.c81c830d27c56ade0d8b62a798ad9bc1.js",
-    "service-worker.js": "/current-weather/service-worker.js",
-    "static/css/main.d1b05096.chunk.css.map": "/current-weather/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.facf0f99.chunk.js.LICENSE.txt": "/current-weather/static/js/2.facf0f99.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/current-weather/static/media/logo.5d5d9eef.svg"
+    "main.css": "/weather/static/css/main.d1b05096.chunk.css",
+    "main.js": "/weather/static/js/main.6fd3d4c8.chunk.js",
+    "main.js.map": "/weather/static/js/main.6fd3d4c8.chunk.js.map",
+    "runtime-main.js": "/weather/static/js/runtime-main.953fba7f.js",
+    "runtime-main.js.map": "/weather/static/js/runtime-main.953fba7f.js.map",
+    "static/js/2.8659e04e.chunk.js": "/weather/static/js/2.8659e04e.chunk.js",
+    "static/js/2.8659e04e.chunk.js.map": "/weather/static/js/2.8659e04e.chunk.js.map",
+    "index.html": "/weather/index.html",
+    "precache-manifest.5be14edd0e6ae81779902e6a9a345810.js": "/weather/precache-manifest.5be14edd0e6ae81779902e6a9a345810.js",
+    "service-worker.js": "/weather/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/weather/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.8659e04e.chunk.js.LICENSE.txt": "/weather/static/js/2.8659e04e.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/weather/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e1bf8379.js",
-    "static/js/2.facf0f99.chunk.js",
+    "static/js/runtime-main.953fba7f.js",
+    "static/js/2.8659e04e.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.a288535d.chunk.js"
+    "static/js/main.6fd3d4c8.chunk.js"
   ]
 }
