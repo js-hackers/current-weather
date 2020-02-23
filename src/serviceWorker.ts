@@ -22,7 +22,7 @@ type Config = {
   onUpdate?: (registration: ServiceWorkerRegistration) => void;
 };
 
-export const register = (config?: Config) => {
+export const register = (config?: Config): void => {
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
     // The URL constructor is available in all browsers that support SW.
     const publicUrl = new URL(
@@ -60,16 +60,16 @@ export const register = (config?: Config) => {
   }
 };
 
-const registerValidSW = (swUrl: string, config?: Config) => {
+const registerValidSW = (swUrl: string, config?: Config): void => {
   navigator.serviceWorker
     .register(swUrl)
     .then(registration => {
-      registration.onupdatefound = () => {
+      registration.onupdatefound = (): void => {
         const installingWorker = registration.installing;
         if (installingWorker === null) {
           return;
         }
-        installingWorker.onstatechange = () => {
+        installingWorker.onstatechange = (): void => {
           if (installingWorker.state === 'installed') {
             if (navigator.serviceWorker.controller) {
               // At this point, the updated precached content has been fetched,
@@ -103,7 +103,7 @@ const registerValidSW = (swUrl: string, config?: Config) => {
     });
 };
 
-const checkValidServiceWorker = (swUrl: string, config?: Config) => {
+const checkValidServiceWorker = (swUrl: string, config?: Config): void => {
   // Check if the service worker can be found. If it can't reload the page.
   fetch(swUrl, {headers: {'Service-Worker': 'script'}})
     .then(response => {
@@ -131,7 +131,7 @@ const checkValidServiceWorker = (swUrl: string, config?: Config) => {
     });
 };
 
-export const unregister = () => {
+export const unregister = (): void => {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready
       .then(registration => {
