@@ -1,7 +1,7 @@
 import {CurrentWeatherData, ForecastWeatherData} from '../shared-types';
 import {useEffect, useState} from 'react';
 
-export const useCurrent = (latitude: number, longitude: number): {
+export const useCurrent = (latitude?: number, longitude?: number): {
   data: CurrentWeatherData | null;
   error: Error | null;
   isLoading: boolean;
@@ -45,7 +45,7 @@ export const useCurrent = (latitude: number, longitude: number): {
   return {data, error, isLoading};
 };
 
-export const useForecast = (latitude: number, longitude: number): {
+export const useForecast = (latitude?: number, longitude?: number): {
   data: ForecastWeatherData | null;
   error: Error | null;
   isLoading: boolean;
