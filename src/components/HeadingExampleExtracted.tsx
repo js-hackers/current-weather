@@ -9,7 +9,7 @@ type SizeValue = '1.5' | '2' | '4';
 const createStyles = (color: string, size: Size): Styles => {
   const styles: Styles = {};
 
-  let fontSize: string;
+  let fontSize: SizeValue;
   switch (size) {
     case 'small': {
       fontSize = '1.5';

@@ -16,7 +16,7 @@ export const Heading: React.FC<Props> = ({
 } = {}) => {
   const styles: Styles = {};
 
-  let fontSize: string;
+  let fontSize: SizeValue;
   switch (size) {
     case 'small': {
       fontSize = '1.5';
