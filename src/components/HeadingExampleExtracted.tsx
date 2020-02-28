@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import {css, jsx} from '@emotion/core';
-import {Styles} from '../shared-types';
-import {useMemo} from 'react';
+import {Styles, useMemoizedStyles} from '../hooks/use-memoized-styles';
 
 type Size = 'small' | 'medium' | 'large';
 type SizeValue = '1.5' | '2' | '4';
@@ -48,7 +47,7 @@ export const Heading: React.FC<Props> = ({
   color = 'blue',
   size = 'medium',
 } = {}) => {
-  const styles = useMemo(() => createStyles(color, size), [color, size]);
+  const styles = useMemoizedStyles(createStyles, [color, size]);
 
   return (
     <h1 css={styles.component}>Hello <span css={styles.name}>world</span></h1>

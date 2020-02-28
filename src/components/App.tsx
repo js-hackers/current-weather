@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import CurrentWeatherData from './CurrentWeatherData';
 import ForecastWeatherData from './ForecastWeatherData';
-import Heading from './HeadingExample';
+import Heading from './HeadingExampleExtracted';
 import {jsx} from '@emotion/core';
 
 export const App: React.FC = () => (
