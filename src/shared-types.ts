@@ -1,11 +1,3 @@
-import {css, keyframes} from '@emotion/core';
-
-export type Styles = {
-  [key: string]:
-    | ReturnType<typeof css>
-    | ReturnType<typeof keyframes>;
-};
-
 export type OWMParams = {[key: string]: string};
 
 export enum OWMUnits {
