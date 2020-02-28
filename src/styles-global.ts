@@ -27,7 +27,7 @@ const styles = css`
 
   /*! End modifications to normalize */
 
-  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono|Roboto:400,700&display=swap&subset=latin-ext');
+  @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700|Roboto+Mono|Roboto:400,700&display=swap&subset=latin-ext');
   @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
   :root {
@@ -37,7 +37,8 @@ const styles = css`
     --color-fg--light: hsl(0, 0%, 0%);
     --color-accent: hsl(210, 100%, 50%);
     --font-mono: 'Roboto Mono', monospace;
-    --font-sans: 'Roboto', sans-serif;
+    /* --font-sans: 'Roboto', sans-serif; */
+    --font-sans: 'Nunito Sans', sans-serif;
   }
 
   body {
