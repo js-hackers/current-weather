@@ -8,22 +8,32 @@ type SizeValue = '1.5' | '2' | '4';
 
 const createStyles = (color: string, size: Size): Styles => {
   const styles: Styles = {};
-  styles.base = css`
-    font-size: ${((): SizeValue => {
-    switch (size) {
-      case 'small': return '1.5';
-      case 'large': return '4';
-      default: return '2';
+
+  let fontSize: string;
+  switch (size) {
+    case 'small': {
+      fontSize = '1.5';
+      break;
     }
-  })()}rem;
+    case 'large': {
+      fontSize = '4';
+      break;
+    }
+    default: {
+      fontSize = '2';
+    }
+  }
+
+  styles.base = css`
+    font-size: ${fontSize}rem;
     font-weight: bold;
   `;
   styles.component = css`
-    ${styles.base}
+    ${styles.base};
     margin: 4rem 1rem;
   `;
   styles.name = css`
-    ${styles.base}
+    ${styles.base};
     color: ${color};
   `;
   return styles;

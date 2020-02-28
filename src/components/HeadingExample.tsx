@@ -15,14 +15,24 @@ export const Heading: React.FC<Props> = ({
   size = 'medium',
 } = {}) => {
   const styles: Styles = {};
-  styles.base = css`
-    font-size: ${((): SizeValue => {
-    switch (size) {
-      case 'small': return '1.5';
-      case 'large': return '4';
-      default: return '2';
+
+  let fontSize: string;
+  switch (size) {
+    case 'small': {
+      fontSize = '1.5';
+      break;
     }
-  })()}rem;
+    case 'large': {
+      fontSize = '4';
+      break;
+    }
+    default: {
+      fontSize = '2';
+    }
+  }
+
+  styles.base = css`
+    font-size: ${fontSize}rem;
     font-weight: bold;
   `;
   styles.component = css`
