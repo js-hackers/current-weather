@@ -13,7 +13,7 @@ type Dependencies = ReadonlyArray<any>; // eslint-disable-line @typescript-eslin
 export const useGuaranteedMemo = <T>(
   factory: (...dependencies: Dependencies) => T,
   dependencies: Dependencies,
-): ReturnType<typeof factory> => {
+): T => {
   const result = useRef<T>(factory(...dependencies));
   const dPrevious = usePrevious(dependencies);
 
