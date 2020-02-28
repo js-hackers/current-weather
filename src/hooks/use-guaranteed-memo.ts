@@ -27,5 +27,3 @@ export const useGuaranteedMemo = <T>(
 
   return result.current;
 };
-
-export default useGuaranteedMemo;
