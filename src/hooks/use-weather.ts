@@ -1,4 +1,4 @@
-import {CurrentWeatherData, ForecastWeatherData} from '../shared-types';
+import {CurrentWeatherData, ForecastWeatherData} from '../types';
 import {useEffect, useState} from 'react';
 
 export const useCurrent = (latitude?: number, longitude?: number): {
