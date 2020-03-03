@@ -1,15 +1,17 @@
 import * as serviceWorker from './serviceWorker';
-import React, {Fragment} from 'react';
+import {initialState, reducer} from './store';
 import App from './components/App';
 import GlobalStyles from './styles-global';
+import React from 'react';
 import {render} from 'react-dom';
+import {StateContextProvider} from './hooks';
 
 render(
   (
-    <Fragment>
+    <StateContextProvider reducer={reducer} initialValue={initialState}>
       <GlobalStyles />
       <App />
-    </Fragment>
+    </StateContextProvider>
   ),
   document.getElementById('root'),
 );
