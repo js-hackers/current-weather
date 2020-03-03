@@ -1,4 +1,4 @@
-import {Action, ActionType, ActionValueString, State} from '../store';
+import {Action, ActionType, ActionWithValue, State} from '../store';
 import {switchcase} from '../utilities';
 
 const color = (
@@ -6,7 +6,7 @@ const color = (
   action: Action,
 ): State['color'] => switchcase(
   action.type,
-  {[ActionType.SetColor]: () => (action as ActionValueString).value},
+  {[ActionType.SetColor]: () => (action as ActionWithValue<string>).value},
   state,
 );
 

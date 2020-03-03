@@ -10,20 +10,23 @@ export enum ActionType {
 //     value: T;
 //   };
 
-type ActionValueUndefined = {type: ActionType};
-export type ActionValueString = {
-  type: ActionType;
-  value: string;
-};
+// type ActionValueUndefined = {type: ActionType};
+// export type ActionValueString = {
+//   type: ActionType;
+//   value: string;
+// };
 
-export type Action =
-  | ActionValueString
-  | ActionValueUndefined;
+// export type Action =
+//   | ActionValueString
+//   | ActionValueUndefined;
 
-export const setColor = (color: string): ActionValueString => ({
+export type Action = {type: ActionType};
+export type ActionWithValue<T> = Action & {value: T};
+
+export const setColor = (color: string): ActionWithValue<string> => ({
   type: ActionType.SetColor,
   value: color,
 });
 
 export const toggleShowActualTemp =
-  (): ActionValueUndefined => ({type: ActionType.ToggleShowActualTemp});
+  (): Action => ({type: ActionType.ToggleShowActualTemp});
