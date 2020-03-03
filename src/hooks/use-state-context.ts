@@ -5,17 +5,19 @@ import {E} from '../types';
 const StateContext =
   createContext<[State, React.Dispatch<Action>] | null>(null);
 
+type TStateContextProviderProps = {
+  reducer: React.Reducer<State, Action>;
+  initialValue: State;
+  init?: () => State;
+  children: React.ReactNode[];
+};
+
 export const StateContextProvider = ({
   reducer,
   initialValue,
   init = (): State => initialValue,
   children,
-}: {
-  reducer: React.Reducer<State, Action>;
-  initialValue: State;
-  init: () => State;
-  children: React.ReactChildren;
-}): E => createElement(
+}: TStateContextProviderProps): E => createElement(
   StateContext.Provider,
   {value: useReducer(reducer, initialValue, init)},
   children,
